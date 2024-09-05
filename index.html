@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Tailwind CSS CDN loaded at the end for performance -->
+    <script src="https://cdn.tailwindcss.com" defer></script>
+</head>
+
+<body class="overflow-hidden">
+    <div class="loader z-30"></div>
+
+    <div class="container mx-auto min-h-screen relative bg-[#414141] max-w-screen-2xl w-full">
+      
+            <img src="public/characters.jpg" class="object-contain w-full h-auto" alt="characters">
+            
+            <div class="characters-overlay absolute inset-0 z-10 grid grid-cols-4 gap-5">
+                <!-- Divs will be dynamically inserted here -->
+            </div>
+        
+    </div>
+
+    <!-- Continue overlay -->
+    <div class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-20" id="continueOverlay">
+        <img src="public/play.png" id="continueButton" class="cursor-pointer w-20" alt="play">
+    </div>
+
+    <!-- Hidden audio element -->
+    <audio id="sound" src="./your-sound-file.mp3" preload="auto"></audio>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
